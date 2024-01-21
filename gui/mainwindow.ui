@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1920</width>
+                <height>1080</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Notes</string>
+        </property>
+        <property name="styleSheet">
+            <string notr="true">padding: 10px</string>
+        </property>
+        <widget class="QWidget" name="centralWidget">
+            <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                    <widget class="QSplitter" name="mainSplitter">
+                        <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                        </property>
+                        <widget class="QWidget" name="leftPanel">
+                            <layout class="QVBoxLayout" name="leftLayout">
+                                <item>
+                                    <layout class="QHBoxLayout" name="headerLayout">
+                                        <item>
+                                            <widget class="QLabel" name="headerLabel">
+                                                <property name="styleSheet">
+                                                    <string>font-size: 20pt; font-weight: bold;</string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Notes</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="addNoteButton">
+                                                <property name="styleSheet">
+                                                    <string>
+                                                        QPushButton {
+                                                            border: none;
+                                                            background-color: transparent;
+                                                            font-size: 25pt;
+                                                            color: black;
+                                                        }
+                                                        QPushButton:hover {
+                                                            color: blue;
+                                                        }
+                                                        QPushButton:pressed {
+                                                            color: red;
+                                                        }
+                                                    </string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>                       +</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item>
+                                    <widget class="QLineEdit" name="searchBar">
+                                        <property name="styleSheet">
+                                            <string>border: 1px solid #cccccc; border-radius: 10px; padding: 5px;</string>
+                                        </property>
+                                        <property name="placeholderText">
+                                            <string>Search notes...</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QListWidget" name="noteList" />
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="rightPanel">
+                            <layout class="QVBoxLayout" name="rightLayout">
+                                <item>
+                                    <widget class="QLineEdit" name="noteTitle">
+                                        <property name="placeholderText">
+                                            <string>Enter note title...</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QTextEdit" name="noteContent" />
+                                </item>
+                            </layout>
+                        </widget>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QStatusBar" name="statusbar" />
+    </widget>
+    <resources />
+    <connections />
+</ui>
