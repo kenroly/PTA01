@@ -8,6 +8,7 @@ from custom_widget.CustomDelegate import CustomDelegate
 from worker.DatabaseInsertNoteWorker import DatabaseInsertNoteWorker
 from worker.DatabaseUpdateDateWorker import DatabaseUpdateDateWorker
 from datetime import datetime
+import os
 
 class Main(QtWidgets.QMainWindow):
     def __init__(self):
